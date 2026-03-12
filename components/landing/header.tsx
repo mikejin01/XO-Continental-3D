@@ -149,7 +149,7 @@ export function Header() {
               <div className="flex justify-between w-full">
                 <a href="#top" className="group pb-10 text-lg font-bold text-white inline-flex items-center gap-2">
                   <img
-                    src="/images/XO-Logo.avif"
+                    src="images/XO-Logo.avif"
                     alt="XO Continental logo"
                     width={34}
                     height={34}
@@ -199,7 +199,7 @@ export function Header() {
             className="group lg:absolute left-0 bottom-3 z-[9999] max-lg:hidden text-lg font-bold tracking-[-0.04em] text-white inline-flex items-center gap-2"
           >
             <img
-              src="/images/XO-Logo.avif"
+              src="images/XO-Logo.avif"
               alt="XO Continental logo"
               width={34}
               height={34}

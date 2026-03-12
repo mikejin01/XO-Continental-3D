@@ -6,9 +6,9 @@ import { serviceCards } from "@/components/landing/data";
 import { cn } from "@/lib/utils";
 
 const serviceImageBackgrounds: Record<string, string> = {
-  "Product Design": "/images/product-design.avif",
-  "UX/UI Design": "/images/ux-ui-design.avif",
-  "Video Editing": "/images/video-editing.avif",
+  "Product Design": "images/product-design.avif",
+  "UX/UI Design": "images/ux-ui-design.avif",
+  "Video Editing": "images/video-editing.avif",
 };
 
 export function Services() {

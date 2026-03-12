@@ -20,7 +20,7 @@ export function Footer() {
               playsInline
               preload="metadata"
             >
-              <source src="/videos/hero-video-2.webm" />
+              <source src="videos/hero-video-2.webm" />
             </video>
             <div className="absolute inset-0 bg-black/60" />
           </div>
