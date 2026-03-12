@@ -20,23 +20,9 @@ export function Footer() {
               playsInline
               preload="metadata"
             >
-              <source src="https://fundamental.bg/videos/video_1.webm" />
+              <source src="/videos/hero-video-2.webm" />
             </video>
             <div className="absolute inset-0 bg-black/60" />
-          </div>
-          <div className="absolute left-8 top-10 h-28 w-28 sm:left-16 sm:top-16">
-            <img
-              src="https://fundamental.bg/images/3d-cta-top.png"
-              alt=""
-              className="h-full w-full object-contain opacity-90"
-            />
-          </div>
-          <div className="absolute bottom-10 right-6 h-36 w-36 sm:bottom-12 sm:right-16 sm:h-44 sm:w-44">
-            <img
-              src="https://fundamental.bg/images/3d-cta-right.png"
-              alt=""
-              className="h-full w-full object-contain opacity-90"
-            />
           </div>
           <div className="relative z-10 flex max-w-5xl flex-col items-center gap-8 text-center">
             <p className="text-2xl font-semibold text-[#D2D2D2] sm:text-4xl">
@@ -44,9 +30,9 @@ export function Footer() {
             </p>
             <a
               href="mailto:hello@xocontinental.com"
-              className="inline-flex min-h-[96px] w-full max-w-5xl items-center justify-center rounded-full border-2 border-[#1C1C1C] bg-white/5 px-6 text-center text-2xl font-bold uppercase text-white backdrop-blur transition hover:shadow-[inset_0_0_45px_rgba(11,112,43,0.5)] sm:min-h-[118px] sm:text-5xl"
+              className="inline-flex min-h-[96px] w-full max-w-5xl items-center justify-center rounded-full border-2 border-[#1C1C1C] bg-white/5 px-6 text-center text-2xl font-bold uppercase text-white backdrop-blur transition hover:shadow-[inset_0_0_45px_rgba(206,166,78,0.5)] sm:min-h-[118px] sm:text-5xl"
             >
-              Let&apos;s collaborate · Let&apos;s collaborate · Let&apos;s collaborate
+              Let&apos;s collaborate
             </a>
           </div>
         </div>

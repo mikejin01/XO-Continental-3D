@@ -9,7 +9,7 @@ export function WorkShowcase() {
     <AnimatedSection className="bg-black px-5 py-24 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-[1440px]" id="work">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-300/80">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#CEA64E]/80">
             Our work
           </p>
           <h2 className="mt-3 text-4xl font-semibold tracking-[-0.06em] text-white sm:text-6xl">

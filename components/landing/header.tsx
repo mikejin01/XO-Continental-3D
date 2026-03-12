@@ -8,12 +8,12 @@ const GLOW_DIRS = ["TOP", "LEFT", "BOTTOM", "RIGHT"] as const;
 type GlowDir = (typeof GLOW_DIRS)[number];
 
 const GLOW_GRADIENTS: Record<GlowDir, string> = {
-  TOP: "radial-gradient(20.7% 50% at 50% 0%, #3EC092 0%, rgba(62,192,146,0) 100%)",
-  LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, #3EC092 0%, rgba(62,192,146,0) 100%)",
-  BOTTOM: "radial-gradient(20.7% 50% at 50% 100%, #3EC092 0%, rgba(62,192,146,0) 100%)",
-  RIGHT: "radial-gradient(16.2% 41.2% at 100% 50%, #3EC092 0%, rgba(62,192,146,0) 100%)",
+  TOP: "radial-gradient(20.7% 50% at 50% 0%, #CEA64E 0%, rgba(206,166,78,0) 100%)",
+  LEFT: "radial-gradient(16.6% 43.1% at 0% 50%, #CEA64E 0%, rgba(206,166,78,0) 100%)",
+  BOTTOM: "radial-gradient(20.7% 50% at 50% 100%, #CEA64E 0%, rgba(206,166,78,0) 100%)",
+  RIGHT: "radial-gradient(16.2% 41.2% at 100% 50%, #CEA64E 0%, rgba(206,166,78,0) 100%)",
 };
-const GLOW_HOVER = "radial-gradient(75% 181.16% at 50% 50%, #3EC092 0%, rgba(255,255,255,0) 100%)";
+const GLOW_HOVER = "radial-gradient(75% 181.16% at 50% 50%, #CEA64E 0%, rgba(255,255,255,0) 100%)";
 
 function GlowBorderLink({ href, children }: { href: string; children: React.ReactNode }) {
   const [hovered, setHovered] = useState(false);
@@ -77,7 +77,7 @@ function AnimatedNavLink({ label, href }: { label: string; href: string }) {
             </motion.span>
           ))}
         </span>
-        <span className="absolute inset-0 block text-[#3EC092]">
+        <span className="absolute inset-0 block text-[#CEA64E]">
           {chars.map((ch, i) => (
             <motion.span
               key={`b-${i}`}
@@ -104,7 +104,7 @@ function ArrowButton() {
         transition: { duration: 0.25, times: [0, 0.5, 0.5001, 1], ease: "linear" },
       }}
     >
-      <div className="flex items-center justify-center bg-[#2CA77B] rounded-full w-10 h-10 text-white">
+      <div className="flex items-center justify-center bg-[#CEA64E] rounded-full w-10 h-10 text-white">
         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none" className="-rotate-45">
           <path d="M3.54297 8.49996H13.4596M13.4596 8.49996L8.5013 3.54163M13.4596 8.49996L8.5013 13.4583" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -116,8 +116,8 @@ function ArrowButton() {
 function SmallLogo() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="38" height="32" viewBox="0 0 38 32" fill="none">
-      <path d="M1.28573 6.91186C-3.02736 18.8151 17.4925 31.0392 19.1785 31.9994V5.38369C15.3124 -1.66502 4.65778 -2.38708 1.28573 6.91186Z" fill="#3EC091" />
-      <path d="M37.0315 6.91243C33.6581 -2.38397 23.0048 -1.70393 19.1387 5.38426V32C20.8247 31.0398 41.3511 18.8156 37.0315 6.91243Z" fill="#2CA77A" />
+      <path d="M1.28573 6.91186C-3.02736 18.8151 17.4925 31.0392 19.1785 31.9994V5.38369C15.3124 -1.66502 4.65778 -2.38708 1.28573 6.91186Z" fill="#CEA64E" />
+      <path d="M37.0315 6.91243C33.6581 -2.38397 23.0048 -1.70393 19.1387 5.38426V32C20.8247 31.0398 41.3511 18.8156 37.0315 6.91243Z" fill="#B88D33" />
     </svg>
   );
 }
@@ -147,7 +147,14 @@ export function Header() {
               transition={{ duration: 0.2 }}
             >
               <div className="flex justify-between w-full">
-                <a href="#top" className="pb-10 text-lg font-bold text-white">
+                <a href="#top" className="group pb-10 text-lg font-bold text-white inline-flex items-center gap-2">
+                  <img
+                    src="/images/XO-Logo.avif"
+                    alt="XO Continental logo"
+                    width={34}
+                    height={34}
+                    className="h-[34px] w-[34px] object-contain transition-transform duration-300 ease-out group-hover:rotate-90"
+                  />
                   X.O. Continental
                 </a>
                 <span className="text-white w-8 -mr-1.5 -mt-0.5 cursor-pointer" onClick={() => setMobileOpen(false)}>
@@ -166,7 +173,7 @@ export function Header() {
                 {navItems.map((item) => (
                   <a
                     key={item.label}
-                    className="hover:text-[#218256] transition-all duration-300 relative font-bold text-2xl md:text-4xl lg:text-4xl"
+                    className="hover:text-[#CEA64E] transition-all duration-300 relative font-bold text-2xl md:text-4xl lg:text-4xl"
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -189,8 +196,15 @@ export function Header() {
           {/* Logo — desktop: absolute bottom-left of the pt-24 wrapper */}
           <a
             href="#top"
-            className="lg:absolute left-0 bottom-3 z-[9999] max-lg:hidden text-lg font-bold tracking-[-0.04em] text-white"
+            className="group lg:absolute left-0 bottom-3 z-[9999] max-lg:hidden text-lg font-bold tracking-[-0.04em] text-white inline-flex items-center gap-2"
           >
+            <img
+              src="/images/XO-Logo.avif"
+              alt="XO Continental logo"
+              width={34}
+              height={34}
+              className="h-[34px] w-[34px] object-contain transition-transform duration-300 ease-out group-hover:rotate-90"
+            />
             X.O. Continental
           </a>
 
@@ -263,7 +277,7 @@ export function Header() {
             <div className="glass-pill flex gap-2 items-center rounded-full py-2 px-3 relative">
               <div className="relative">
                 <div
-                  className="absolute -left-3 -top-1.5 bg-[#218256] rounded-full"
+                  className="absolute -left-3 -top-1.5 bg-[#CEA64E] rounded-full"
                   style={{ width: 34, height: 28, transform: "translateX(11.5px) translateY(6px)" }}
                 />
                 <button className="text-sm px-2 py-1 rounded-full transition-all duration-300 cursor-pointer relative z-10 hover:text-white font-semibold text-white">

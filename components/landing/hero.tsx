@@ -52,7 +52,7 @@ function AnimatedTitle() {
                   return (
                     <motion.span
                       key={cIdx}
-                      className="bg-gradient-to-r from-[#96D1B0] via-[#F5F5F8] to-[#96D1B0] bg-clip-text text-transparent"
+                      className="bg-gradient-to-r from-[#CEA64E] via-[#F6E9C6] to-[#CEA64E] bg-clip-text text-transparent"
                       style={{
                         display: "inline-block",
                         backgroundSize: "1400% 100%",
@@ -85,8 +85,8 @@ export function Hero() {
       id="top"
       className="bg-black relative py-20 max-lg:py-0 max-lg:pt-0 max-sm:px-5 max-lg:h-[80vh] max-sm:h-screen max-sm:pt-36 overflow-hidden"
     >
-      <div className="bg-green-500/10 max-sm:bg-green-500/15 w-96 h-96 absolute -left-72 -top-20 z-30 rounded-full blur-3xl" />
-      <div className="bg-green-500/10 max-sm:bg-green-500/15 w-96 h-96 absolute -right-72 top-20 z-30 rounded-full blur-3xl" />
+      <div className="bg-[#CEA64E]/10 max-sm:bg-[#CEA64E]/15 w-96 h-96 absolute -left-72 -top-20 z-30 rounded-full blur-3xl" />
+      <div className="bg-[#CEA64E]/10 max-sm:bg-[#CEA64E]/15 w-96 h-96 absolute -right-72 top-20 z-30 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t h-[300px] from-black via-black/50 max-sm:via-black/20 to-transparent z-20" />
       <div className="absolute top-0 left-0 w-full bg-gradient-to-b h-[400px] from-black via-black/50 to-transparent z-20" />
       <div className="absolute inset-y-0 left-0 w-full lg:w-[42%] bg-gradient-to-r from-transparent via-black/10 to-transparent z-20 pointer-events-none" />
@@ -145,10 +145,10 @@ export function Hero() {
                 whileHover="hover"
                 animate="rest"
               >
-                <div className="absolute inset-0 pointer-events-none bg-[#1F8053] rounded-full z-10 blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse" />
-                <div className="bg-gradient-to-r pointer-events-none from-[#1F8053] via-[#1F8053] to-[#1F8053]/45 group-hover:to-[#1F8053] transition-all w-full h-full absolute duration-500 top-0 left-0 rounded-full z-10 blur-sm group-hover:animate-pulse" />
+                <div className="absolute inset-0 pointer-events-none bg-[#9C7425] rounded-full z-10 blur-sm opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:animate-pulse" />
+                <div className="bg-gradient-to-r pointer-events-none from-[#9C7425] via-[#9C7425] to-[#9C7425]/45 group-hover:to-[#9C7425] transition-all w-full h-full absolute duration-500 top-0 left-0 rounded-full z-10 blur-sm group-hover:animate-pulse" />
                 <div className="p-[2px] rounded-full relative overflow-hidden max-sm:w-full">
-                  <div className="bg-gradient-to-r from-[#1F8053] via-transparent to-transparent group-hover:via-[#1F8053] group-hover:to-[#1F8053] transition-all duration-500 ease-out absolute top-0 left-0 w-full h-full rounded-full" />
+                  <div className="bg-gradient-to-r from-[#9C7425] via-transparent to-transparent group-hover:via-[#9C7425] group-hover:to-[#9C7425] transition-all duration-500 ease-out absolute top-0 left-0 w-full h-full rounded-full" />
                   <div className="flex items-center justify-center gap-2 bg-[#0D0F0C] max-sm:py-3.5 rounded-full px-10 py-3 relative z-20 overflow-hidden text-white max-sm:w-full">
                     Start a project
                     <div className="w-4 -ml-1 -mr-1.5 h-4 relative flex items-center justify-center overflow-hidden">
@@ -189,20 +189,15 @@ export function Hero() {
       </div>
 
       <div className="absolute inset-0 z-0 w-full h-full">
-         <video
-           className="absolute inset-0 w-full h-full object-cover object-center scale-[1.08] lg:object-[38%_32%] opacity-45"
-           autoPlay
-           loop
-           muted
-           playsInline
-         >
-           <source src="/videos/hero-video.webm" type="video/webm" />
-         </video>
+         <Spline
+           className="absolute inset-0 z-0 w-full h-full opacity-75 pointer-events-none"
+           scene="https://prod.spline.design/MVm7FpzEmMaOGMKy/scene.splinecode"
+         />
          <Spline
            className="relative z-10 w-full h-full scale-[1.12] translate-y-[8%] lg:translate-x-[16%] lg:translate-y-[12%] lg:scale-[1.2]"
-           scene="https://prod.spline.design/KLyBMr0IaEtKfBe9/scene.splinecode"
+          scene="https://prod.spline.design/KLyBMr0IaEtKfBe9/scene.splinecode?v=2"
          />
-         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40 z-10 pointer-events-none" />
+         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40 z-[5] pointer-events-none" />
       </div>
     </section>
   );
