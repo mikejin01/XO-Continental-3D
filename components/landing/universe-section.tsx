@@ -31,7 +31,7 @@ export function UniverseSection() {
   const dimsRef = useRef({ w: 1440, h: 900, mobile: false });
 
   useEffect(() => {
-    fetch("/lottie-hero.json")
+    fetch("lottie-hero.json")
       .then((r) => r.json())
       .then(setAnimData);
 
